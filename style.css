@@ -3,11 +3,12 @@
 .background_pattern {
     position: relative;
     background-image: url('http://www.fa-d.com/wp-content/themes/fa-design/library/media/images/pattern.png');
-    height: 100vh;
+    height: 98vh;
     width: 100vw;
     opacity: 0.5;
     z-index: 1;
-}
+    overflow: hidden;
+    }
 
 .background_img {
     position: absolute;
@@ -17,23 +18,55 @@
     width: 100vw;
     background-size: cover;
     opacity: 1;
+    overflow: hidden;
 }
 
 .container {
     position: absolute;
     top: 0;
     left: 0;
-    display: grid;
-    grid-template-columns: 1fr 1024px 1fr;
-
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
 }
 
 .content {
-    grid-column-start: 2;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: whitesmoke;    
 }
 
 .header {
     height: 120px;
     text-align: left;
     margin: 10px 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin-left: 0;
+    padding-left: 0
+}
+
+.summary {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: whitesmoke;
+}
+
+footer {
+    position: relative;
+    height: 50px;
+    max-width: 1024px;
+    top: 0px;
+    color: red;
+    font-size: 1rem;
+}
+
+footer p {
+    float: right;
 }
