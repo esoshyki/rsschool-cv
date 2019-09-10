@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
+/* font-family: 'Nanum Gothic', sans-serif; */
+.background_pattern {
+    position: relative;
+    background-image: url('http://www.fa-d.com/wp-content/themes/fa-design/library/media/images/pattern.png');
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.background_img {
+    position: absolute;
+    top: 0;
+    background-image: url('./static/back2.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    opacity: 1;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1024px 1fr;
+
+}
+
+.content {
+    grid-column-start: 2;
+}
+
+.header {
+    height: 120px;
+    text-align: left;
+    margin: 10px 20px;
+}
