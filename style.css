@@ -1,22 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
 /* font-family: 'Nanum Gothic', sans-serif; */
-.background_pattern {
-    position: relative;
-    background-image: url('http://www.fa-d.com/wp-content/themes/fa-design/library/media/images/pattern.png');
-    height: 98vh;
-    width: 100vw;
-    opacity: 0.5;
-    z-index: 1;
-    overflow: hidden;
-    }
 
 .background_img {
     position: absolute;
     top: 0;
-    background-image: url('./static/back2.jpg');
-    height: 100vh;
+    background-image: url('./static/back.jpg');
     width: 100vw;
-    background-size: cover;
+    height: 100vh;
+    background-size: contain;
     opacity: 1;
     overflow: hidden;
 }
@@ -33,14 +24,28 @@
 .content {
     max-width: 1024px;
     margin: 0 auto;
+    padding: 10px 20px;
     font-family: 'Nanum Gothic', sans-serif;
-    color: whitesmoke;    
+    color: whitesmoke;
+    line-height: 30px;    
 }
 
 .header {
     height: 120px;
     text-align: left;
-    margin: 10px 20px;
+    margin: 10px 10px;
+}
+
+h1 {
+    color: yellowgreen;
+    user-select: none;
+}
+
+.avatar {
+    float: left;
+    width: 200px;
+    height: 130px;
+    margin: 10px
 }
 
 li {
@@ -52,6 +57,16 @@ ul {
     padding-left: 0
 }
 
+ul a {
+    color: yellowgreen;
+    text-decoration: none;
+}
+
+ul a:hover {
+    color: aqua;
+    transition: 0.6s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
 .summary {
     font-size: 1.4rem;
     font-weight: 700;
@@ -60,13 +75,36 @@ ul {
 
 footer {
     position: relative;
-    height: 50px;
-    max-width: 1024px;
-    top: 0px;
-    color: red;
-    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    padding: 10px;
+    justify-content: space-around;
+    align-content: center;
 }
 
-footer p {
-    float: right;
+
+.icons {
+    position: relative;
+    top: 5px;
+    left: 18px;
+    width: 64px;
+    height: 64px;
+}
+
+.icons:hover {
+    filter: grayscale(1);
+    transition: 0.6s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+@media (max-width: 655px) {
+    .summary {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: whitesmoke;
+    }
+
+    .background_img {
+        height: 150vh;
+
+    }
 }
