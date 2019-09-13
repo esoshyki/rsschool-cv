@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
 /* font-family: 'Nanum Gothic', sans-serif; */
 
-.body {
-
-}
-
 .container {
     position: absolute;
     top: 0;
@@ -87,8 +83,11 @@ footer {
     height: 64px;
 }
 
-.icons:hover {
-    filter: grayscale(1);
+.icons_animate {
+    position: relative;
+    top: -74px;
+    left: 15px;
+    z-index: 1;
     transition: 0.6s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
